@@ -1,0 +1,33 @@
+{
+    "project": "Ooumph Agentic AI System",
+    "framework": "AGNO",
+    "llm": "Gemini 1.5 Flash",
+    "vector_store": "Qdrant",
+    "ui": "Streamlit",
+    "architecture": {
+      "supervisor": "LeadAgent",
+      "layers": {
+        "trust": ["VibeTrustAgent", "BotShieldAgent"],
+        "community": ["CommunityBuilderAgent"],
+        "business": ["BusinessMatcherAgent"],
+        "governance": ["GovernanceControllerAgent"],
+        "marketing": ["MarketingAgent", "SEOAgent", "ContentBot", "SocialMediaAgent", "ReportingBot"]
+      }
+    },
+    "tools": [
+      "generate_blog", "search_trends", "generate_report",
+      "detect_fake_behavior", "document_search", "schedule_post"
+    ],
+    "env_vars": ["GOOGLE_API_KEY"],
+    "run_steps": [
+      "Start Qdrant via Docker",
+      "Upload docs with tools/upload_documents.py",
+      "Launch Streamlit UI from ui/app.py"
+    ],
+    "status": "Working and interactive",
+    "notes": [
+      "All major issues resolved",
+      "Agents communicate through AGNO.Team",
+      "Gemini embedding operational"
+    ]
+  }  

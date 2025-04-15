@@ -1,0 +1,11 @@
+routing:
+  - condition: "type == 'marketing'"
+    agent: marketing_agent
+  - condition: "type == 'trust'"
+    agent: vibe_trust_agent
+  - condition: "type == 'governance'"
+    agent: governance_controller_agent
+  - condition: "type == 'business'"
+    agent: business_matcher_agent
+  - condition: "type == 'community'"
+    agent: community_builder_agent

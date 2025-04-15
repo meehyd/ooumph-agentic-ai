@@ -1,0 +1,6 @@
+Trust Score (VibeScore) is calculated using:
+
+- Engagement quality (posts, replies, shares)
+- Verified signals (KYC, email, phone)
+- Sentiment positivity (via DistilBERT sentiment model)
+- Peer trust graph weight (Neo4j or in-network endorsements)

@@ -1,10 +1,11 @@
-from adk.tools import Tool
+from agno.tools import tool
+import datetime
 
-class SchedulerTool(Tool):
-    def __init__(self):
-        super().__init__(name="PostSchedulerTool")
-
-    def call(self, inputs: dict) -> dict:
-        post = inputs.get("post", "")
-        platform = inputs.get("platform", "LinkedIn")
-        return {"status": "Scheduled", "platform": platform, "post": post}
+@tool
+def schedule_post(content: str, post_time: str) -> str:
+    """Schedules a post at the specified time."""
+    try:
+        dt = datetime.datetime.strptime(post_time, "%Y-%m-%d %H:%M:%S")
+        return f"✅ Post scheduled for {dt.strftime('%Y-%m-%d %H:%M:%S')} with content: {content[:60]}"
+    except ValueError:
+        return "❌ Invalid datetime format. Use YYYY-MM-DD HH:MM:SS"
