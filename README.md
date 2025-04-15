@@ -1,4 +1,4 @@
-# 🧠 Ooumph Agentic AI (AGNO + Gemini)
+# 🧠 Ooumph Agentic AI
 
 This is a multi-agent system powered by Ooumph AI. The architecture supports community building, marketing automation, trust scoring, governance, and business validation.
 
